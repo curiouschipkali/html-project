@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: url("pants/baccccccc.jpg") fixed center/cover no-repeat; 
+        }
+       
+            
+        
+
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background: linear-gradient(180deg,#000, #144758);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 40px;
+            font-family:fantasy;
+        }
+
+        .spacer {
+            width: 100%;
+            height: 500px;
+            background: url("pants/baccccccc.jpg") center/cover no-repeat;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: rgba(39,107,128, 0.8); /* Semi-transparent white background for better readability */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        
+        }
+
+        .product {
+            border: 1px solid #99cfe0;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(23.33% - 40px); /* 3 items in each row */
+            background-color: #c1e1ec;
+        }
+
+        .product img {
+            width: 100%;
+            height: 400px; /* Fixed height for consistency */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .href-btn{
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #72bcd4;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+           }
+
+        button:hover {
+            background-color: #194553;
+        }
+
+        button:active {
+            background-color: #fff;
+            color: #000;
+        }
+        .size-buttons{
+            
+            size: .005px;
+            padding: 2px 3px;
+        
+        }
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+              }
+        .pagination a{
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: black;
+            background-color: #72bcd4;
+            border : 1px solid rgb(0, 0, 0);
+            padding : 8px;
+            transition : background-color 0.3s;
+            text-decoration: none;
+            width: 20px;
+            border-radius: 4px;
+        }
+        .pagination a.active{
+                background-color : #194553;
+                color : white;
+                border : 1px solid rgb(255, 255, 255);
+            }
+    </style>
+</head>
+<body>
+
+<header>TROUSERS</header>
+<a href = "cart.html" class = "href-btn">Cart</a>
+<br>
+<a href = "main.html" class = "href-btn">Home</a>
+
+<div class="spacer"></div>
+
+<div class="products">
+    <div class="product">
+        <img src="pants/wide trousers.jpg" alt="wt">
+        <h2>Wide Trousers</h2>
+        <p>Price: ₹2299</p>
+        <button onclick="addToCart('Wide Trousers - M', 1,2299)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Wide Trousers - S', 1,2299)">S</button>
+            <button onclick="addToCart('Wide Trousers - M', 1,2299)">M</button>
+            <button onclick="addToCart('Wide Trousers - L', 1,2299)">L</button>
+            <button onclick="addToCart('Wide Trousers - XL', 1,2299)">XL</button>
+            <button onclick="addToCart('Wide Trousers - XXL', 1,2299)">XXL</button>
+        </div>
+    </div>
+    <div class="product">
+        <img src="pants/wide high jeans (1).PNG" alt="whj">
+        <h2>Wide high jeans</h2>
+        <p>Price: ₹2299</p>
+        <button onclick="addToCart('Wide high jeans - M', 1,2299)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Wide high jeans - S', 1,2299)">S</button>
+            <button onclick="addToCart('Wide high jeans - M', 1,2299)">M</button>
+            <button onclick="addToCart('Wide high jeans - L', 1,2299)">L</button>
+            <button onclick="addToCart('Wide high jeans - XL', 1,2299)">XL</button>
+            <button onclick="addToCart('Wide high jeans - XXL', 1,2299)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pants/high-waisted tailored jeans.jpg" alt="hwtj">
+        <h2>High waisted tailored jeans</h2>
+        <p>Price: ₹1499</p>
+        <button onclick="addToCart('High waisted tailored jeans - M', 1,1499)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('High waisted tailored jeans - S', 1,1499)">S</button>
+            <button onclick="addToCart('High waisted tailored jeans - M', 1,1499)">M</button>
+            <button onclick="addToCart('High waisted tailored jeans - L', 1,1499)">L</button>
+            <button onclick="addToCart('High waisted tailored jeans - XL', 1,1499)">XL</button>
+            <button onclick="addToCart('High waisted tailored jeans - XXL', 1,1499)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pants/flared twill trousers.jpg" alt="ftt">
+        <h2>Flared twill trousers</h2>
+        <p>Price: ₹1299</p>
+        <button onclick="addToCart('Flared twill trousers - M', 1,1299)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Flared twill trousers - S', 1,1299)">S</button>
+            <button onclick="addToCart('Flared twill trousers - M', 1,1299)">M</button>
+            <button onclick="addToCart('Flared twill trousers - L', 1,1299)">L</button>
+            <button onclick="addToCart('Flared twill trousers - XL', 1,1299)">XL</button>
+            <button onclick="addToCart('Flared twill trousers - XXL', 1,1299)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pants/wide trousers (2).jpg" alt="wt2">
+        <h2>Wide linen trousers</h2>
+        <p>Price: ₹2699</p>
+        <button onclick="addToCart('Wide linen trousers - M', 1,2699)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Wide linen trousers - S', 1,2699)">S</button>
+            <button onclick="addToCart('Wide linen trousers - M', 1,2699)">M</button>
+            <button onclick="addToCart('Wide linen trousers - L', 1,2699)">L</button>
+            <button onclick="addToCart('Wide linen trousers - XL', 1,2699)">XL</button>
+            <button onclick="addToCart('Wide linen trousers - XXL', 1,2699)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pants/high-waisted joggers.jpg" alt="hwj">
+        <h2>High waisted joggers</h2>
+        <p>Price: ₹1499</p>
+        <button onclick="addToCart('High waisted joggers - M', 1,1499)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('High waisted joggers - S', 1,1499)">S</button>
+            <button onclick="addToCart('High waisted joggers - M', 1,1499)">M</button>
+            <button onclick="addToCart('High waisted joggers - L', 1,1499)">L</button>
+            <button onclick="addToCart('High waisted joggers - XL', 1,1499)">XL</button>
+            <button onclick="addToCart('High waisted joggers - XXL', 1,1499)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pants/cargo joggers.jpg" alt="cj">
+        <h2>Cargo joggers</h2>
+        <p>Price: ₹2699</p>
+        <button onclick="addToCart('Cargo joggers- M', 1,2699)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Cargo joggers - S', 1,2699)">S</button>
+            <button onclick="addToCart('Cargo joggers- M', 1,2699)">M</button>
+            <button onclick="addToCart('Cargo joggers - L', 1,2699)">L</button>
+            <button onclick="addToCart('Cargo joggers - XL', 1,2699)">XL</button>
+            <button onclick="addToCart('Cargo joggers - XXL', 1,2699)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pants/slim fit cotton twill trousers.jpg" alt="sfctt">
+        <h2>Slim fit cotton twill trousers</h2>
+        <p>Price: ₹1499</p>
+        <button onclick="addToCart('Slim fit cotton twill trousers - M', 1,1499)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Slim fit cotton twill trousers - S', 1,1499)">S</button>
+            <button onclick="addToCart('Slim fit cotton twill trousers - M', 1,1499)">M</button>
+            <button onclick="addToCart('Slim fit cotton twill trousers - L', 1,1499)">L</button>
+            <button onclick="addToCart('Slim fit cotton twill trousers - XL', 1,1499)">XL</button>
+            <button onclick="addToCart('Slim fit cotton twill trousers - XXL', 1,1499)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pants/loose cargo denim joggers.jpg" alt="lcdj">
+        <h2>Loose cargo denim joggers</h2>
+        <p>Price: ₹2299</p>
+        <button onclick="addToCart('Loose cargo denim joggers - M', 1,2299)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Loose cargo denim joggers - S', 1,2299)">S</button>
+            <button onclick="addToCart('Loose cargo denim joggers - M', 1,2299)">M</button>
+            <button onclick="addToCart('Loose cargo denim joggers - L', 1,2299)">L</button>
+            <button onclick="addToCart('Loose cargo denim joggers - XL', 1,2299)">XL</button>
+            <button onclick="addToCart('Loose cargo denim joggers - XXL', 1,2299)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pants/slim fit cotton chinos.jpg" alt="sfcc">
+        <h2>Slim fit cotton chinos</h2>
+        <p>Price: ₹1999</p>
+        <button onclick="addToCart('Slim fit cotton chinos - M', 1,1999)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Slim fit cotton chinos - S', 1,1999)">S</button>
+            <button onclick="addToCart('Slim fit cotton chinos - M', 1,1999)">M</button>
+            <button onclick="addToCart('Slim fit cotton chinos - L', 1,1999)">L</button>
+            <button onclick="addToCart('Slim fit cotton chinos - XL', 1,1999)">XL</button>
+            <button onclick="addToCart('Slim fit cotton chinos - XXL', 1,1999)">XXL</button>
+        </div>
+    </div>
+    <div class="product">
+        <img src="pants/relaxed fit sweatpants.jpg" alt="rfs">
+        <h2>Relaxed fit sweatpants</h2>
+        <p>Price: ₹1499</p>
+        <button onclick="addToCart('Relaxed fit sweatpants - M', 1,1499)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Relaxed fit sweatpants - S', 1,1499)">S</button>
+            <button onclick="addToCart('Relaxed fit sweatpants - M', 1,1499)">M</button>
+            <button onclick="addToCart('Relaxed fit sweatpants - L', 1,1499)">L</button>
+            <button onclick="addToCart('Relaxed fit sweatpants - XL', 1,1499)">XL</button>
+            <button onclick="addToCart('Relaxed fit sweatpants - XXL', 1,1499)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pants/regular fit linen blend trousers.jpg" alt="rflbt">
+        <h2>Regular fit linen blend trousers</h2>
+        <p>Price: ₹2299</p>
+        <button onclick="addToCart('Regular fit linen blend trousers - M', 1,2299)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Regular fit linen blend trousers - S', 1,2299)">S</button>
+            <button onclick="addToCart('Regular fit linen blend trousers - M', 1,2299)">M</button>
+            <button onclick="addToCart('Regular fit linen blend trousers - L', 1,2299)">L</button>
+            <button onclick="addToCart('Regular fit linen blend trousers - XL', 1,2299)">XL</button>
+            <button onclick="addToCart('Regular fit linen blend trousers - XXL', 1,2299)">XXL</button>
+        </div>
+    </div>
+
+
+
+    
+</div>
+
+
+<script>
+    function addToCart(productName, quantity, price) {
+      const item = { productName, quantity, price };
+
+      // Retrieve existing cart items from sessionStorage
+      const existingCart = JSON.parse(sessionStorage.getItem('cart')) || [];
+      const existingItem = existingCart.find(item => item.productName === productName);
+
+      if (existingItem) {
+        // If the item is already in the cart, update the quantity
+        existingItem.quantity += quantity;
+      } else {
+        // If the item is not in the cart, add it
+        existingCart.push(item);
+      }
+
+      // Save updated cart back to sessionStorage
+      sessionStorage.setItem('cart', JSON.stringify(existingCart));
+    }
+
+    function clearCart() {
+      // Clear the cart in sessionStorage
+    
+    }
+  </script>
+  <div class = "pagination">
+    <a href = "tshirtss.html">1</a>
+    <a href = "#" class = "active">2</a>
+    <a href = "shoess.html">3</a>        
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: url("Tshirtspics/wallpaperflare.com_wallpaper (1).jpg") fixed center/cover no-repeat; 
+        }
+       
+            
+        
+
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #000, #ff8c00);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 40px;
+            font-family:fantasy;
+        }
+
+        .spacer {
+            width: 100%;
+            height: 500px;
+            background: url("Tshirtspics/wallpaperflare.com_wallpaper.jpg") center/cover no-repeat;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: rgba(213, 104, 104, 0.8); /* Semi-transparent white background for better readability */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        
+        }
+
+        .product {
+            border: 1px solid #c36f6f;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(23.33% - 40px); /* 3 items in each row */
+            background-color: #d4afaf;
+        }
+
+        .product img {
+            width: 100%;
+            height: 400px; /* Fixed height for consistency */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+           }
+        .href-btn{
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #484848;
+        }
+
+        button:active {
+            background-color: #fff;
+            color: #000;
+        }
+        .size-buttons{
+            
+            size: .005px;
+            padding: 2px 3px;
+        
+        }
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+              }
+        .pagination a{
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: black;
+            background-color: #ff8c00;
+            border : 1px solid rgb(0, 0, 0);
+            padding : 8px;
+            transition : background-color 0.3s;
+            text-decoration: none;
+            width: 20px;
+            border-radius: 4px;
+        }
+        .pagination a.active{
+                background-color : #AD4400;
+                color : white;
+                border : 1px solid rgb(255, 255, 255);
+            }
+        
+    </style>
+</head>
+<body>
+
+<header>TEES-N-HOODIES</header>
+<a href = "cart.html" class = "href-btn">Cart</a>
+<br>
+<a href = "main.html" class = "href-btn">Home</a>
+
+<div class="spacer"></div>
+
+<div class="products">
+    <div class="product">
+        <img src="Tshirtspics\Screenshot 2023-12-31 015019.png" alt="T-Shirt 1">
+        <h2>TheGreatOnes</h2>
+        <p>Price: ₹3499</p>
+        <button onclick="addToCart('TheGreatOnes T-Shirt - M', 1,1799)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('TheGreatOnes T-Shirt - S', 1,1799)">S</button>
+            <button onclick="addToCart('TheGreatOnes T-Shirt - M',1, 1799)">M</button>
+            <button onclick="addToCart('TheGreatOnes T-Shirt - L', 1,1799)">L</button>
+            <button onclick="addToCart('TheGreatOnes T-Shirt- XL', 1,1799)">XL</button>
+            <button onclick="addToCart('TheGreatOnes T-Shirt XXL', 1,1799)">XXL</button>
+        </div>
+    </div>
+    <div class="product">
+        <img src="Tshirtspics/da7a559d82d1ce4c85c5935b93373d1f.jpg" alt="T-Shirt 1">
+        <h2>All-Season</h2>
+        <p>Price: ₹1799</p>
+        <button onclick="addToCart('All-Season T-Shirt  - M', 1,1799)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('All-Season T-Shirt - S',1, 1799)">S</button>
+            <button onclick="addToCart('All-Season T-Shirt  - M', 1,1799)">M</button>
+            <button onclick="addToCart('All-Season T-Shirt - L', 1,1799)">L</button>
+            <button onclick="addToCart('All-Season T-Shirt  - XL', 1,1799)">XL</button>
+            <button onclick="addToCart('All-Season T-Shirt  - XXL', 1,1799)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Tshirtspics/76dfcc916eaebfa965edee5d94bb109e.jpg" alt="T-Shirt 1">
+        <h2>Fantasy</h2>
+        <p>Price: ₹2799</p>
+        <button onclick="addToCart('Fantasy T-Shirt -M',1, 2799)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Fantasy T-Shirt- S',1, 2799)">S</button>
+            <button onclick="addToCart('Fantasy T-Shirt  - M', 1,2799)">M</button>
+            <button onclick="addToCart('Fantasy T-Shirt - L', 1,2799)">L</button>
+            <button onclick="addToCart('Fantasy T-Shirt - XL',1,2799)">XL</button>
+            <button onclick="addToCart('Fantasy T-Shirt- XXL',1, 2799)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Tshirtspics/21f4c0ffeee8621d080c3b82f881f681.jpg" alt="T-Shirt 1">
+        <h2>Covernat</h2>
+        <p>Price: ₹1999</p>
+        <button onclick="addToCart('Covernat T-Shirt -M',1, 1999)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Covernat T-Shirt  - S',1, 1999)">S</button>
+            <button onclick="addToCart('Covernat T-Shirt  - M',1, 1999)">M</button>
+            <button onclick="addToCart('Covernat T-Shirt  - L',1, 1999)">L</button>
+            <button onclick="addToCart('Covernat T-Shirt  - XL',1, 1999)">XL</button>
+            <button onclick="addToCart('Covernat T-Shirt  - XXL',1, 1999)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Tshirtspics/f471233963a188faa6ae071178d226e9.jpg" alt="T-Shirt 1">
+        <h2>Land-Rover</h2>
+        <p>Price: ₹2999</p>
+        <button onclick="addToCart('Land-Rover T-Shirt -M ',1, 2999)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Land-Rover T-Shirt  - S',1, 2999)">S</button>
+            <button onclick="addToCart('Land-Rover T-Shirt  - M',1, 2999)">M</button>
+            <button onclick="addToCart('Land-Rover T-Shirt  - L', 1, 2999)">L</button>
+            <button onclick="addToCart('Land-Rover T-Shirt  - XL', 1, 2999)">XL</button>
+            <button onclick="addToCart('Land-Rover T-Shirt  - XXL', 1, 2999)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Tshirtspics/d7ba5d432fd7b7c722e6eeb4e621df8d.jpg" alt="T-Shirt 1">
+        <h2>BeeFinder</h2>
+        <p>Price: ₹2499</p>
+        <button onclick="addToCart('T-Shirt 1', 1,2499)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('BeeFinder T-Shirt -  S', 1,2499)">S</button>
+            <button onclick="addToCart('BeeFinder T-Shirt  - M', 1,2499)">M</button>
+            <button onclick="addToCart('BeeFinder T-Shirt  - L', 1,2499)">L</button>
+            <button onclick="addToCart('BeeFinder T-Shirt  - XL', 1,2499)">XL</button>
+            <button onclick="addToCart('BeeFinder T-Shirt  - XXL', 1,2499)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Tshirtspics/03ef1dfcf443c095c3b5ccd0f79a30e6.png" alt="T-Shirt 1">
+        <h2>Champion</h2>
+        <p>Price: ₹1399</p>
+        <button onclick="addToCart('T-Shirt 1', 1,1399)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Champion T-Shirt - S', 1,1399)">S</button>
+            <button onclick="addToCart('Champion T-Shirt - M', 1,1399)">M</button>
+            <button onclick="addToCart('Champion T-Shirt - L', 1,1399)">L</button>
+            <button onclick="addToCart('Champion T-Shirt - XL', 1,1399)">XL</button>
+            <button onclick="addToCart('Champion T-Shirt - XXL', 1,1399)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Tshirtspics/e6134c9e0d72d3ba3a822ee9452f0926.jpg" alt="T-Shirt 1">
+        <h2>Calabasas</h2>
+        <p>Price: ₹2999</p>
+        <button onclick="addToCart('Calabasas T-Shirt  - M', 1,2999)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Calabasas T-Shirt  - S', 1,2999)">S</button>
+            <button onclick="addToCart('Calabasas T-Shirt  - M', 1,2999)">M</button>
+            <button onclick="addToCart('Calabasas T-Shirt  - L', 1,2999)">L</button>
+            <button onclick="addToCart('Calabasas T-Shirt  - XL', 1,2999)">XL</button>
+            <button onclick="addToCart('Calabasas T-Shirt  - XXL', 1,2999)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Tshirtspics/8e6dfe085a6d64586619b0e840dec122.jpg" alt="T-Shirt 1">
+        <h2>Thread'-'s</h2>
+        <p>Price: ₹1299</p>
+        <button onclick="addToCart('Thread'-'s T-Shirt  - M', 1,1299)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Thread'-'s T-Shirt  - S', 1, 1299)">S</button>
+            <button onclick="addToCart('Thread'-'s T-Shirt  - M', 1, 1299)">M</button>
+            <button onclick="addToCart('Thread'-'s T-Shirt  - L', 1, 1299)">L</button>
+            <button onclick="addToCart('Thread'-'s T-Shirt  - XL', 1, 1299)">XL</button>
+            <button onclick="addToCart('Thread'-'s T-Shirt  - XXL', 1, 1299)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Tshirtspics/1c91eff9010df6395b0cc7e0ee132983.jpg" alt="T-Shirt 1">
+        <h2>SouthPark</h2>
+        <p>Price: ₹1299</p>
+        <button onclick="addToCart('SouthPark T-Shirt  - M', 1, 1299)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('SouthPark T-Shirt  - S', 1, 1299)">S</button>
+            <button onclick="addToCart('SouthPark T-Shirt  - M', 1, 1299)">M</button>
+            <button onclick="addToCart('SouthPark T-Shirt  - L', 1, 1299)">L</button>
+            <button onclick="addToCart('SouthPark T-Shirt  - XL', 1, 1299)">XL</button>
+            <button onclick="addToCart('SouthPark T-Shirt - XXL', 1, 1299)">XXL</button>
+        </div>
+    </div>
+    <div class="product">
+        <img src="Tshirtspics/ef77ca04eb8c82ac59ab6f746a7ffaef.jpg" alt="T-Shirt 1">
+        <h2>Phandom</h2>
+        <p>Price: ₹1299</p>
+        <button onclick="addToCart('Phandom T-Shirt  - M', 1, 1299)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Phandom T-Shirt  - S', 1, 1299)">S</button>
+            <button onclick="addToCart('Phandom T-Shirt  - M', 1, 1299)">M</button>
+            <button onclick="addToCart('Phandom T-Shirt  - L', 1, 1299)">L</button>
+            <button onclick="addToCart('Phandom T-Shirt  - XL', 1, 1299)">XL</button>
+            <button onclick="addToCart('Phandom T-Shirt  - XXL', 1, 1299)">XXL</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Tshirtspics/444d390dcb23cf5851b3fc529dc34aae.jpg" alt="T-Shirt 1">
+        <h2>Mystique</h2>
+        <p>Price: ₹1299</p>
+        <button onclick="addToCart('Mystique T-Shirt 1', 1, 1299)">Add to Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Mystique T-Shirt - S',1, 1299)">S</button>
+            <button onclick="addToCart('Mystique T-Shirt - M', 1, 1299)">M</button>
+            <button onclick="addToCart('Mystique T-Shirt - L', 1, 1299)">L</button>
+            <button onclick="addToCart('Mystique T-Shirt - XL', 1, 1299)">XL</button>
+            <button onclick="addToCart('Mystique T-Shirt - XXL', 1, 1299)">XXL</button>
+        </div>
+    
+    </div>
+    
+    
+
+    <!-- Repeat the above product div structure for the other 8 T-Shirts -->
+</div>
+<div class = "pagination">
+    <a href = "#" class = "active">1</a>
+    <a href = "pantss.html">2</a>
+    <a href = "shoess.html">3</a>        
+</div>
+
+
+<script>
+    function addToCart(productName, quantity, price) {
+      const item = { productName, quantity, price };
+
+      // Retrieve existing cart items from sessionStorage
+      const existingCart = JSON.parse(sessionStorage.getItem('cart')) || [];
+      const existingItem = existingCart.find(item => item.productName === productName);
+
+      if (existingItem) {
+        // If the item is already in the cart, update the quantity
+        existingItem.quantity += quantity;
+      } else {
+        // If the item is not in the cart, add it
+        existingCart.push(item);
+      }
+
+      // Save updated cart back to sessionStorage
+      sessionStorage.setItem('cart', JSON.stringify(existingCart));
+    }
+
+    function clearCart() {
+      // Clear the cart in sessionStorage
+    
+    }
+  </script>
+
+
+
+
+</body>
+</html>

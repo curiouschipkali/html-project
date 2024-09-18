@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: url("shoes/5170170\ \(1\).jpg") fixed center/cover no-repeat; 
+        }
+       
+            
+        
+
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #000, #ff8c00);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 40px;
+            font-family:fantasy;
+        }
+
+        .spacer {
+            width: 100%;
+            height: 500px;
+            background: url("shoes/5170170\ \(1\).png") center/cover no-repeat;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #bef28f; /* Semi-transparent white background for better readability */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            color: transparent;
+        
+        }
+
+        .product {
+            border: 1px solid #a4f25e;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(23.33% - 40px); /* 3 items in each row */
+            background-color: #5bb50b;
+            color: transparent;
+        }
+
+        .product img {
+            width: 100%;
+            height: 400px; /* Fixed height for consistency */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+           }
+        .href-btn{
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #484848;
+        }
+
+        button:active {
+            background-color: #fff;
+            color: #000;
+        }
+        .size-buttons{
+            
+            size: .005px;
+            padding: 2px 3px;
+        
+        }
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+              }
+        .pagination a{
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: black;
+            background-color: #bef28f;
+            border : 1px solid rgb(0, 0, 0);
+            padding : 8px;
+            transition : background-color 0.3s;
+            text-decoration: none;
+            width: 20px;
+            border-radius: 4px;
+        }
+        .pagination a.active{
+                background-color : #5bb50b;
+                color : white;
+                border : 1px solid rgb(255, 255, 255);
+            }
+        
+    </style>
+</head>
+<body>
+
+    <header>Shoes</header>
+    <a href = "cart.html" class = "href-btn">Cart</a>
+    <a href = "main.html" class = "href-btn">Home</a>
+<div class = "spacer"></div>
+
+<div class="products">
+    <div class="product">
+        <img src="shoes/platform.jpg" alt="Shoe1">
+        <h2>Platform sneakers</h2>
+        <p>Price: Rs4999</p>
+        <button onclick="addToCart('Platform sneakers Shoe1 - UK 7',1,1799)">Add to Cart </button>
+        <div class="size-buttons">
+             <button onclick="addToCart('Platform sneakers Shoe1 - UK 6',1,4999)">6</button>
+             <button onclick="addToCart('Platform sneakers Shoe1 - UK 7',1,4999)">7</button>
+             <button onclick="addToCart('Platform sneakers Shoe1 - UK 8',1,4999)">8</button>
+             <button onclick="addToCart('Platform sneakers Shoe1 - UK 9',1,4999)">9</button>
+             <button onclick="addToCart('Platform sneakers Shoe1 - UK 10',1,4999)">10</button>
+
+
+        </div>
+    </div>
+    <div class="product">
+        <img src="shoes/platform3 (2).jpeg" alt="Shoe1">
+        <h2>Denim </h2>
+        <p>Price: Rs5999</p>
+        <button onclick="addToCart('Denim Shoe1 - UK 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Denim Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('Denim Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('Denim Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('Denim Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('Denim Shoe1 - UK 10',1,1799)">10</button>
+
+        </div>
+    </div>
+    <div class="product">
+        <img src="shoes/platform3 (1).jpeg" alt="Shoe1">
+        <h2>Blue Air </h2>
+        <p>Price: Rs7999</p>
+        <button onclick="addToCart('Blue Air Shoe1 - UK 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Blue Air Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('Blue Air Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('Blue Air Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('Blue Air Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('Blue Air Shoe1 - UK 10',1,1799)">10</button>
+
+
+        </div>
+    </div>
+    <div class="product">
+        <img src="shoes/shoes (2).jpeg" alt="Shoe1">
+        <h2>Skate</h2>
+        <p>Price: Rs7999</p>
+        <button onclick="addToCart('Skate - UK 7 Shoe1',1,11799)">Add To Cart</button>
+        <div class="size-buttons">
+             <button onclick="addToCart('Skate Shoe1 - UK 6',1,1799)">6</button>
+             <button onclick="addToCart('Skate Shoe1 - UK 7',1,1799)">7</button>
+             <button onclick="addToCart('Skate Shoe1 - UK 8',1,1799)">8</button>
+             <button onclick="addToCart('Skate Shoe1 - UK 9',1,1799)">9</button>
+             <button onclick="addToCart('Skate Shoe1 - UK 10',1,1799)">10</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="shoes/sneat.jpeg" alt="Shoe1">
+        <h2>Future</h2>
+        <p>Price: Rs6999</p>
+        <button onclick="addToCart('Future Shoe1 - UK 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Future Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('Future Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('Future Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('Future Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('Future Shoe1 - UK 10',1,1799)">10</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="shoes/shoes (3).jpeg" alt="Shoe1">
+        <h2>Tiger</h2>
+        <p>Price: Rs8999</p>
+        <button onclick="addToCart('Tiger Shoe1 - UK 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Tiger Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('Tiger Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('Tiger Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('Tiger Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('Tiger Shoe1 - UK 10',1,1799)">10</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="shoes/sneaker1 (2).jpeg" alt="Shoe1">
+        <h2>Trekist</h2>
+        <p>Price: Rs7999</p>
+        <button onclick="addToCart('Trekist Shoe1 - UK 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Trekist Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('Trekist Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('Trekist Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('Trekist Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('Trekist Shoe1 - UK 10',1,1799)">10</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="shoes/sneaker2.jpg" alt="Shoe1">
+        <h2>Unisex</h2>
+        <p>Price: Rs6999</p>
+        <button onclick="addToCart('Unisex Shoe1 - Uk 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Unisex Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('Unisex Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('Unisex Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('Unisex Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('Unisex Shoe1 - UK 10',1,1799)">10</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="shoes/sneaker1 (1).jpeg" alt="Shoe1">
+        <h2>Aster</h2>
+        <p>Price: Rs8999</p>
+        <button onclick="addToCart('Aster Shoe1 - UK 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('Aster Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('Aster Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('Aster Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('Aster Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('Aster Shoe1 - UK 10',1,1799)">10</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="shoes/shoes (1).jpeg" alt="Shoe1">
+        <h2>The Comfort Zone</h2>
+        <p>Price: Rs4999</p>
+        <button onclick="addToCart('The Comfort Zone Shoe1 - UK 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('The Comfort Zone Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('The Comfort Zone Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('The Comfort Zone Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('The Comfort Zone Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('The Comfort Zone Shoe1 - UK 10',1,1799)">10</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="shoes/shoes1 (1).jpeg" alt="Shoe1">
+        <h2>New Vintage</h2>
+        <p>Price: Rs6999</p>
+        <button onclick="addToCart('New Vintage Shoe1 - UK 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('New Vintage Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('New Vintage Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('New Vintage Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('New Vintage Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('New Vintage Shoe1 - UK 10',1,1799)">10</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="shoes/shoes1 (2).jpeg" alt="Shoe1">
+        <h2>yeetz</h2>
+        <p>Price: Rs8999</p>
+        <button onclick="addToCart('yeetz Shoe1 - UK 7',1,1799)">Add To Cart</button>
+        <div class="size-buttons">
+            <button onclick="addToCart('yeetz Shoe1 - UK 6',1,1799)">6</button>
+            <button onclick="addToCart('yeetz Shoe1 - UK 7',1,1799)">7</button>
+            <button onclick="addToCart('yeetz Shoe1 - UK 8',1,1799)">8</button>
+            <button onclick="addToCart('yeetz Shoe1 - UK 9',1,1799)">9</button>
+            <button onclick="addToCart('yeetz Shoe1 - UK 10',1,1799)">10</button>
+        </div>
+    </div>
+</div>
+
+<div class = "pagination">
+
+<a href = "tshirtss.html">1</a>
+<a href = "pantss.html">2</a>
+<a href = "#" class = "active">3</a>
+
+</div>
+
+<script>
+    function addToCart(productName, quantity, price) {
+      const item = { productName, quantity, price };
+
+      // Retrieve existing cart items from sessionStorage
+      const existingCart = JSON.parse(sessionStorage.getItem('cart')) || [];
+      const existingItem = existingCart.find(item => item.productName === productName);
+
+      if (existingItem) {
+        // If the item is already in the cart, update the quantity
+        existingItem.quantity += quantity;
+      } else {
+        // If the item is not in the cart, add it
+        existingCart.push(item);
+      }
+
+      // Save updated cart back to sessionStorage
+      sessionStorage.setItem('cart', JSON.stringify(existingCart));
+    }
+
+    function clearCart() {
+      // Clear the cart in sessionStorage
+    
+    }
+  </script>
+
+
+
+
+</body>
+</html>
